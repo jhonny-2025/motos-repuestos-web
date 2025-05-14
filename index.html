@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Repuestos Motos Pereira</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+    .product-card {
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1602391835126-cf7f4e07ac1b?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Repuestos de Moto Pereira</h1>
+    <p>Calidad, confianza y los mejores precios para tu moto</p>
+    <a href="#productos" class="btn btn-warning btn-lg mt-3">Ver productos</a>
+  </header>
+
+  <section id="productos" class="container py-5">
+    <h2 class="text-center mb-4">Nuestros Repuestos Destacados</h2>
+    <div class="row" id="product-list">
+
+      <!-- Productos -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://motos.auteco.com.co/wp-content/uploads/2021/02/Bateria.jpg" class="card-img-top" alt="Batería">
+          <div class="card-body">
+            <h5 class="card-title">Batería 12V</h5>
+            <p class="card-text">Para motos deportivas y urbanas.</p>
+            <button class="btn btn-success" onclick="addToCart('Batería 12V')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://accesoriosparamotos.co/wp-content/uploads/2022/03/kit-arrastre-original.jpg" class="card-img-top" alt="Kit de arrastre">
+          <div class="card-body">
+            <h5 class="card-title">Kit de Arrastre</h5>
+            <p class="card-text">Piñón, catalina y cadena reforzada.</p>
+            <button class="btn btn-success" onclick="addToCart('Kit de Arrastre')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://www.bogotamotos.com.co/wp-content/uploads/2022/09/filtro-aire-akt-nkx-125-original.jpg" class="card-img-top" alt="Filtro de aire">
+          <div class="card-body">
+            <h5 class="card-title">Filtro de Aire</h5>
+            <p class="card-text">Mejora la combustión y rendimiento.</p>
+            <button class="btn btn-success" onclick="addToCart('Filtro de Aire')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Llantas -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://llantasbaratas.com.co/wp-content/uploads/2020/06/llanta-corsa-90-90-18.jpg" class="card-img-top" alt="Llanta Corsa 90/90-18">
+          <div class="card-body">
+            <h5 class="card-title">Llanta Corsa 90/90-18</h5>
+            <p class="card-text">Ideal para motos tipo sport.</p>
+            <button class="btn btn-success" onclick="addToCart('Llanta Corsa 90/90-18')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://llantasbaratas.com.co/wp-content/uploads/2020/07/llanta-maxxis-130.jpg" class="card-img-top" alt="Llanta Maxxis 130/70-17">
+          <div class="card-body">
+            <h5 class="card-title">Llanta Maxxis 130/70-17</h5>
+            <p class="card-text">Excelente agarre y durabilidad.</p>
+            <button class="btn btn-success" onclick="addToCart('Llanta Maxxis 130/70-17')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Balineras -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://refaccionesdemotos.com/wp-content/uploads/2021/10/balineras-genericas-6202-zz.jpg" class="card-img-top" alt="Balineras">
+          <div class="card-body">
+            <h5 class="card-title">Balineras 6202-ZZ</h5>
+            <p class="card-text">Rodamientos sellados de alta precisión.</p>
+            <button class="btn btn-success" onclick="addToCart('Balineras 6202-ZZ')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manubrio -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://accesoriosparamotos.co/wp-content/uploads/2020/08/manubrio-aluminio.jpg" class="card-img-top" alt="Manubrio">
+          <div class="card-body">
+            <h5 class="card-title">Manubrio de Aluminio</h5>
+            <p class="card-text">Ligero y resistente, ideal para personalización.</p>
+            <button class="btn btn-success" onclick="addToCart('Manubrio de Aluminio')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mangos -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="https://motozulu.com/wp-content/uploads/2021/07/puños-antideslizantes.jpg" class="card-img-top" alt="Mangos Antideslizantes">
+          <div class="card-body">
+            <h5 class="card-title">Mangos Antideslizantes</h5>
+            <p class="card-text">Comodidad y control en todo clima.</p>
+            <button class="btn btn-success" onclick="addToCart('Mangos Antideslizantes')">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container mb-5">
+    <h2 class="text-center">🛒 Carrito de Compras</h2>
+    <ul id="cart" class="list-group mb-3"></ul>
+    <div class="text-end">
+      <button class="btn btn-primary" onclick="checkout()">Finalizar compra</button>
+    </div>
+  </section>
+
+  <section class="container mb-5">
+    <h2 class="text-center">📩 Contáctanos</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" required>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+      </div>
+      <p><strong>📞 Teléfono:</strong> <a href="tel:3016083603">3016083603</a></p>
+      <a href="https://wa.me/573016083603" class="btn btn-success mb-3" target="_blank">📲 Escríbenos por WhatsApp</a>
+      <button type="submit" class="btn btn-dark">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="text-center p-4 bg-dark text-white">
+    <p>&copy; 2025 Repuestos de Moto Pereira. Todos los derechos reservados. | 📞 3016083603</p>
+  </footer>
+
+  <script>
+    const cart = [];
+
+    function addToCart(product) {
+      cart.push(product);
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartList = document.getElementById('cart');
+      cartList.innerHTML = '';
+      cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.innerHTML = `${item} <button class='btn btn-sm btn-danger' onclick='removeFromCart(${index})'>Eliminar</button>`;
+        cartList.appendChild(li);
+      });
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert('El carrito está vacío.');
+      } else {
+        alert('Gracias por tu compra. Pronto te contactaremos.');
+        cart.length = 0;
+        renderCart();
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
